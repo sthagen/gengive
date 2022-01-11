@@ -25,3 +25,12 @@ Commands:
 $ gengive version
 Render text (Danish: gengive tekst). version 2022.1.11
 ```
+
+## Verify command
+
+Not yet for real - but a start:
+```console
+$ gengive verify requirements.txt
+using configuration ({})
+markdown may be OK
+```
