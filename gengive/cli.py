@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=line-too-long
 """Commandline API gateway for turvallisuusneuvonta."""
-import pathlib
 import sys
 from typing import List, Union
 
@@ -38,31 +37,55 @@ def callback(
         raise typer.Exit()
 
 
-@app.command('verify')
-def verify(
-    source: str = typer.Argument(gg.STDIN),
-    inp: str = typer.Option(
+@app.command('render')
+def render(
+    manuscript: str = typer.Option(
         '',
-        '-i',
-        '--input',
-        help='Path to input file (default is reading from standard in)',
+        '-m',
+        '--manuscript',
+        help='Path to input manuscript folder',
         metavar='<sourcepath>',
     ),
-    conf: str = typer.Option(
+    target: str = typer.Option(
         '',
-        '-c',
-        '--config',
-        help='Path to config file (default is $HOME/.gengive.json)',
-        metavar='<configpath>',
+        '-t',
+        '--target',
+        help='Target (default is default)',
+        metavar='target',
     ),
 ) -> int:
     """
-    Answer the question if now is a working hour.
+    render the manuscript for target.
+    """
+    command = 'render'
+    target = target if target else gg.DEFAULT_TARGET
+    action = [command, manuscript, target]
+    return sys.exit(gg.main(action))
+
+
+@app.command('verify')
+def verify(
+    manuscript: str = typer.Option(
+        '',
+        '-m',
+        '--manuscript',
+        help='Path to input manuscript folder',
+        metavar='<sourcepath>',
+    ),
+    target: str = typer.Option(
+        '',
+        '-t',
+        '--target',
+        help='Target (default is default)',
+        metavar='target',
+    ),
+) -> int:
+    """
+    verify the request.
     """
     command = 'verify'
-    incoming = inp if inp else (source if source != gg.STDIN else '')
-    config = conf if conf else pathlib.Path.home() / gg.DEFAULT_CONFIG_NAME
-    action = [command, str(incoming), str(config)]
+    target = target if target else gg.DEFAULT_TARGET
+    action = [command, manuscript, target]
     return sys.exit(gg.main(action))
 
 

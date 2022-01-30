@@ -18,9 +18,9 @@ def test_gg_verify_request_unknown_command():
     assert gg.verify_request(['unknown', 'later', 'does not matter']) == (2, 'received unknown command', [''])
 
 
-def test_gg_verify_request_falsy_input():
+def test_gg_parse_request_falsy_input():
     argv = ['verify', '', '']
-    assert gg.verify_request(argv) == (2, 'configuration missing', [''])
+    assert gg.parse_request(gg.workspace_path(), argv) == (1, 'Document() is not available', '', '', '')
 
 
 def test_reader_empty():
