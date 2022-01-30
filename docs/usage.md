@@ -27,7 +27,7 @@ $ gengive version
 Render text (Danish: gengive tekst). version 2022.1.30
 ```
 
-## Verify command
+## Render command
 
 ```console
 $ gengive render --manuscript bar --target default
