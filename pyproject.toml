@@ -1,12 +1,13 @@
 [tool.pyflow]
 name = "gengive"
 py_version = "3.8"
-version = "2022.1.11"
+version = "2022.1.30"
 authors = ["Stefan Hagen <stefan@hagen.link>"]
 
 [tool.pyflow.scripts]
 
 [tool.pyflow.dependencies]
+markdown = "^3.3.6"
 pandocn = "^2.0.1"
 pydantic = "^1.8.2"
 typer = "^0.4.0"
