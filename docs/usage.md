@@ -140,7 +140,7 @@ Yes a subsection
 
 ```python
 print(42)
-```
+\```
 
 ## A Table Section
 
@@ -180,7 +180,7 @@ Yes a subsection
 
 ```python
 print(42)
-```
+\```
 
 ## A Table Section
 
