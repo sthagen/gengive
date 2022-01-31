@@ -1,7 +1,7 @@
 [tool.pyflow]
 name = "gengive"
 py_version = "3.8"
-version = "2022.1.30"
+version = "2022.1.31"
 authors = ["Stefan Hagen <stefan@hagen.link>"]
 
 [tool.pyflow.scripts]
