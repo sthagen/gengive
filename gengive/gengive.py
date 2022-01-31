@@ -29,8 +29,12 @@ DEFAULT_TARGET = 'default'
 ENCODING = 'utf-8'
 ENCODING_ERRORS_POLICY = 'ignore'
 HIDDEN = '.'
-MEDIA_FOLDER_NAMES = ('diagrams', 'images')
-NON_MANUSCRIPT_FOLDERS = ('bin', 'render')
+PUBLISHER_ROOT_STR = os.getenv('GENGIVE_PUBLISHER_ROOT', '')
+PUBLISHER_ROOT = pathlib.Path(PUBLISHER_ROOT_STR) if PUBLISHER_ROOT_STR else pathlib.Path.cwd()
+RENDER_ROOT_STR = os.getenv('GENGIVE_RENDER_ROOT', '')
+RENDER_ROOT = pathlib.Path(RENDER_ROOT_STR) if RENDER_ROOT_STR else pathlib.Path.cwd()
+MEDIA_FOLDER_NAMES = os.getenv('GENGIVE_MEDIA_FOLDER_NAMES', 'diagrams,images,pictures').split(',')
+NON_MANUSCRIPT_FOLDERS = os.getenv('GENGIVE_NON_MANUSCRIPT_FOLDERS', 'bin,render')
 REPORT_TIMESTAMP_FORMAT = '%Y-%m-%d %H:%M:%S UTC'
 
 PathType = pathlib.Path
@@ -62,7 +66,7 @@ def describe_file(file_path: PathType) -> Tuple[str, Union[dti.datetime, None], 
 
 def workspace_path() -> PathType:
     """Derive the workspace from the module path of this script."""
-    return pathlib.Path(__file__).resolve().parent.parent
+    return PUBLISHER_ROOT
 
 
 def manuscripts_available(workspace: PathType) -> Generator[str, None, None]:
@@ -117,7 +121,7 @@ def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, str, 
 
     print(
         f'Requested rendering document({manuscript}) for target({variant})'
-        f' below {root_path}/render/{manuscript}/{variant}/ ...'
+        f' below {RENDER_ROOT}/render/{manuscript}/{variant}/ ...'
     )
     return 0, '', command, manuscript, variant
 
@@ -420,7 +424,7 @@ def main(argv: Union[List[str], None] = None) -> int:
     for rank, part in enumerate(binder, start=1):
         print(f'{rank :>2d}: {part}')
 
-    collation_folder = root_path / 'render' / manuscript / variant
+    collation_folder = RENDER_ROOT / 'render' / manuscript / variant
     collation_folder.mkdir(parents=True, exist_ok=True)
     collation_name = f'{render_config["name"]}.md'
     collation_path = collation_folder / collation_name
