@@ -1,5 +1,9 @@
 # Change History
 
+## 2022.1.31
+
+* Added env var for publisher and render root (first fix of issue #4 - The location of manuscripts is site-packages for app)
+
 ## 2022.1.30
 
 * Added markdown dependency (Experimental)

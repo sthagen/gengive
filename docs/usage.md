@@ -24,13 +24,14 @@ Commands:
 
 ```console
 $ gengive version
-Render text (Danish: gengive tekst). version 2022.1.30
+Render text (Danish: gengive tekst). version 2022.1.31
 ```
 
 ## Render command
 
 ```console
-$ gengive render --manuscript bar --target default
+$ GENGIVE_PUBLISHER_ROOT=/somewhere/gengive \
+ GENGIVE_RENDER_ROOT=/somewhere/gengive gengive render --manuscript bar --target default
 Retrieving manuscript folders below /somewhere/gengive ...
 - bar
 Identifying variants defined for document(bar) ...
@@ -274,7 +275,8 @@ $ cat render/bar/default/html/the-name-of-the-thing.html
 
 May become a dry run option of the render command:
 ```console
-$ gengive verify --manuscript bar
+$  GENGIVE_PUBLISHER_ROOT=/somewhere/gengive \
+ GENGIVE_RENDER_ROOT=/somewhere/gengive gengive verify --manuscript bar
 Note: Dry run - verification mode.
 Retrieving manuscript folders below /somewhere/gengive ...
 - bar
