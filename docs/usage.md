@@ -16,7 +16,6 @@ Options:
 
 Commands:
   render   render the manuscript for target.
-  verify   verify the request.
   version  Display the gengive version and exit
 ```
 
@@ -24,10 +23,54 @@ Commands:
 
 ```console
 $ gengive version
-Render text (Danish: gengive tekst). version 2022.1.31
+Render text (Danish: gengive tekst). version 2022.2.1
 ```
 
 ## Render command
+
+### Dry run
+
+```console
+$ gengive render examples/bar/ --dry-run
+Note: Dry run - verification mode.
+Updating publisher root from /somewhere/gengive to examples ...
+Retrieving manuscript folders below publisher root examples ...
+- bar
+Identifying variants defined for document(bar) ...
+- default
+Requested rendering document(bar) for target(default) below /somewhere/gengive/render/bar/default/ ...
+Binder analysis OK, all files resolve. Sequence of binding will be:
+ 1: examples/bar/foo.md
+{
+  "request_parameters": [
+    "verify",
+    "examples/bar/",
+    "default"
+  ],
+  "processing_start": "2022-02-01 21:33:11 UTC",
+  "manuscript": "bar",
+  "variant": "default",
+  "manuscript_path": "examples/bar",
+  "config_path": "examples/bar/render-config.json",
+  "config_hash_sha256": "1a7de86e951d0d9374cee0dc1152fe781f16db072cb45985c300d4477374bd6e",
+  "config_data_version": "2022-01-30 15:42:38 UTC",
+  "config_size_bytes": 59,
+  "render_config": {
+    "name": "the-name-of-the-thing"
+  },
+  "binder_path": "examples/bar/bind-default.txt",
+  "binder_hash_sha256": "38cf0d8e52b3020eb9e750c30998e1759657ad927462621ddd0b706b79a140c5",
+  "binder_data_version": "2022-01-30 15:41:15 UTC",
+  "binder_size_bytes": 7,
+  "binder": [
+    "examples/bar/foo.md"
+  ]
+}
+```
+
+### Render
+
+Another variant using environment variables to specify publisher and render root:
 
 ```console
 $ GENGIVE_PUBLISHER_ROOT=/somewhere/gengive \
@@ -269,45 +312,4 @@ $ cat render/bar/default/html/the-name-of-the-thing.html
     </body>
     </html>
 
-```
-
-## Verify command
-
-May become a dry run option of the render command:
-```console
-$  GENGIVE_PUBLISHER_ROOT=/somewhere/gengive \
- GENGIVE_RENDER_ROOT=/somewhere/gengive gengive verify --manuscript bar
-Note: Dry run - verification mode.
-Retrieving manuscript folders below /somewhere/gengive ...
-- bar
-Identifying variants defined for document(bar) ...
-- default
-Requested rendering document(bar) for target(default) below /somewhere/gengive/render/bar/default/ ...
-Binder analysis OK, all files resolve. Sequence of binding will be:
- 1: /somewhere/gengive/bar/foo.md
-{
-  "request_parameters": [
-    "verify",
-    "bar",
-    "default"
-  ],
-  "processing_start": "2022-01-30 16:11:01 UTC",
-  "manuscript": "bar",
-  "variant": "default",
-  "manuscript_path": "/somewhere/gengive/bar",
-  "config_path": "/somewhere/gengive/bar/render-config.json",
-  "config_hash_sha256": "1a7de86e951d0d9374cee0dc1152fe781f16db072cb45985c300d4477374bd6e",
-  "config_data_version": "2022-01-30 15:42:38 UTC",
-  "config_size_bytes": 59,
-  "render_config": {
-    "name": "the-name-of-the-thing"
-  },
-  "binder_path": "/somewhere/gengive/bar/bind-default.txt",
-  "binder_hash_sha256": "38cf0d8e52b3020eb9e750c30998e1759657ad927462621ddd0b706b79a140c5",
-  "binder_data_version": "2022-01-30 15:41:15 UTC",
-  "binder_size_bytes": 7,
-  "binder": [
-    "/somewhere/gengive/bar/foo.md"
-  ]
-}
 ```
