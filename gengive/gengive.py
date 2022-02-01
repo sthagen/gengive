@@ -87,8 +87,8 @@ def variants_available(manuscript_path: PathType) -> Generator[str, None, None]:
             yield candidate.replace(BINDER_PREFIX, '').replace(BINDER_POSTFIX, '').lower()
 
 
-def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, str, str, str]:
-    """Verify the request and yield the quadruplet of error code, message, manuscript, and variant.
+def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, PathType, str, str, str]:
+    """Verify the request and yield the quadruplet of error code, message, root_path, manuscript, and variant.
     The shape of argv shall be verified already to contain manuscript and variant as the only two string items.
     If error code is 0 message is empty and manuscript as well as variant are valid.
     else error code can be used as process return code and message is non-empty.
@@ -97,17 +97,25 @@ def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, str, 
     if command == 'verify':
         print('Note: Dry run - verification mode.')
 
-    print(f'Retrieving manuscript folders below {root_path} ...')
-    manuscripts = tuple(manuscripts_available(root_path))
+    publisher_root = root_path
+    if manuscript:
+        m_path = pathlib.Path(manuscript)
+        if m_path.is_dir():
+            publisher_root = m_path.parent
+            manuscript = m_path.name
+            print(f'Updating publisher root from {root_path} to {publisher_root} ...')
+
+    print(f'Retrieving manuscript folders below publisher root {publisher_root} ...')
+    manuscripts = tuple(manuscripts_available(publisher_root))
     for available in sorted(manuscripts):
         print(f'- {available}')
 
     if manuscript not in manuscripts:
-        message = f'Document({manuscript}) is not available'
-        return 1, message, '', '', ''
+        message = f'Document({manuscript}) is not available within publisher root {publisher_root}'
+        return 1, message, root_path, '', '', ''
 
     print(f'Identifying variants defined for document({manuscript}) ...')
-    manuscript_path = root_path / manuscript
+    manuscript_path = publisher_root / manuscript
     variants = tuple(variants_available(manuscript_path))
     for available in sorted(variants):
         print(f'- {available}')
@@ -117,13 +125,13 @@ def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, str, 
             f'Target({variant}) is not defined for document({manuscript})'
             f' - you may want to add a {manuscript}/bind-{variant}.txt file'
         )
-        return 1, message, '', '', ''
+        return 1, message, root_path, '', '', ''
 
     print(
         f'Requested rendering document({manuscript}) for target({variant})'
         f' below {RENDER_ROOT}/render/{manuscript}/{variant}/ ...'
     )
-    return 0, '', command, manuscript, variant
+    return 0, '', publisher_root, command, manuscript, variant
 
 
 def load_config(config_folder: PathType, variant: str) -> Tuple[int, str, Dict[str, str]]:
@@ -370,7 +378,7 @@ def main(argv: Union[List[str], None] = None) -> int:
 
     processing_start = dti.datetime.utcnow()
     root_path = workspace_path()
-    error_code, message, command, manuscript, variant = parse_request(root_path, argv)
+    error_code, message, root_path, command, manuscript, variant = parse_request(root_path, argv)
     if error_code:
         print(f'ERROR: {message}')
         return error_code

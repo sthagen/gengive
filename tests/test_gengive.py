@@ -20,7 +20,14 @@ def test_gg_verify_request_unknown_command():
 
 def test_gg_parse_request_falsy_input():
     argv = ['verify', '', '']
-    assert gg.parse_request(gg.workspace_path(), argv) == (1, 'Document() is not available', '', '', '')
+    error_code, message, root_path, command, manuscript, variant = gg.parse_request(gg.workspace_path(), argv)
+    assert error_code == 1
+    message_start = 'Document() is not available within publisher root '
+    assert message.startswith(message_start)
+    assert root_path == gg.workspace_path()
+    assert command == ''
+    assert manuscript == ''
+    assert variant == ''
 
 
 def test_reader_empty():

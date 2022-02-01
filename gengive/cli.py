@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 # pylint: disable=line-too-long
 """Commandline API gateway for turvallisuusneuvonta."""
@@ -39,51 +39,33 @@ def callback(
 
 @app.command('render')
 def render(
+    source: str = typer.Argument(''),
     manuscript: str = typer.Option(
         '',
         '-m',
         '--manuscript',
-        help='Path to input manuscript folder',
-        metavar='<sourcepath>',
+        help='Path to or name of input manuscript folder (no default)',
+        metavar='<manuscript>',
     ),
     target: str = typer.Option(
-        '',
+        'default',
         '-t',
         '--target',
-        help='Target (default is default)',
+        help='Target facet to render manuscript as (default is default)',
         metavar='target',
+    ),
+    verify: bool = typer.Option(
+        False,
+        '-n',
+        '--dry-run',
+        help='Dry run (default is False)',
     ),
 ) -> int:
     """
     render the manuscript for target.
     """
-    command = 'render'
-    target = target if target else gg.DEFAULT_TARGET
-    action = [command, manuscript, target]
-    return sys.exit(gg.main(action))
-
-
-@app.command('verify')
-def verify(
-    manuscript: str = typer.Option(
-        '',
-        '-m',
-        '--manuscript',
-        help='Path to input manuscript folder',
-        metavar='<sourcepath>',
-    ),
-    target: str = typer.Option(
-        '',
-        '-t',
-        '--target',
-        help='Target (default is default)',
-        metavar='target',
-    ),
-) -> int:
-    """
-    verify the request.
-    """
-    command = 'verify'
+    command = 'render' if not verify else 'verify'
+    manuscript = manuscript if manuscript else source
     target = target if target else gg.DEFAULT_TARGET
     action = [command, manuscript, target]
     return sys.exit(gg.main(action))
