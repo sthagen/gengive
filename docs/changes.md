@@ -4,6 +4,7 @@
 
 * Migrated verify command to dry-run option for the render command
 * Enable manuscript as positional argument and per path to derive the publisher root folder (additional fix of issue #4)
+* Bumped test coverage from around 20 to around 75%.
 
 ## 2022.1.31
 
