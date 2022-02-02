@@ -1,5 +1,10 @@
 # Change History
 
+## 2022.2.2
+
+* Added publisher and render root options to the render command (additional fix of issue #4)
+* Fixed broken media scan path construction
+
 ## 2022.2.1
 
 * Migrated verify command to dry-run option for the render command
