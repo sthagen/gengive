@@ -32,5 +32,7 @@ print(42)
 
 A missing image ![so missed](picture.jpg)
 
+An existing image ![so red](images/red.png)
+
 End.
 
