@@ -54,6 +54,20 @@ def render(
         help='Target facet to render manuscript as (default is default)',
         metavar='target',
     ),
+    publisher_root: str = typer.Option(
+        str(gg.PUBLISHER_ROOT),
+        '-p',
+        '--publisher-root',
+        help=f'Publisher root (default is {gg.PUBLISHER_ROOT})',
+        metavar='target',
+    ),
+    render_root: str = typer.Option(
+        str(gg.PUBLISHER_ROOT),
+        '-r',
+        '--render-root',
+        help=f'Render root (default is {gg.RENDER_ROOT})',
+        metavar='target',
+    ),
     verify: bool = typer.Option(
         False,
         '-n',
@@ -67,7 +81,7 @@ def render(
     command = 'render' if not verify else 'verify'
     manuscript = manuscript if manuscript else source
     target = target if target else gg.DEFAULT_TARGET
-    action = [command, manuscript, target]
+    action = [command, publisher_root, manuscript, target, render_root]
     return sys.exit(gg.main(action))
 
 

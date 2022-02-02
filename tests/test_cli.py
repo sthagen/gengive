@@ -7,7 +7,7 @@ from gengive import cli
 
 
 def test_main_legacy_ok(capsys):
-    assert cli.main(['render', 'examples/bar', 'default']) == 0
+    assert cli.main(['render', '.', 'examples/bar', 'default', '.']) == 0
     out, err = capsys.readouterr()
     parts = (
         'Updating publisher root from ',
@@ -19,7 +19,7 @@ def test_main_legacy_ok(capsys):
         'Binder analysis OK, all files resolve. Sequence of binding will be:',
         ' 1: examples/bar/foo.md',
         'Binding source documents from (bar) for target(default) to ',
-        '- Written 37 lines from 1 parts to ',
+        '- Written 39 lines from 1 parts to ',
         'Writing HTML rendition from (bar) for target(default) to ',
         'Creating HTML rendition of document(bar) for target(default) below ',
         'Determine set of media assets in use ...',
@@ -48,7 +48,7 @@ def test_callback():
 
 def test_render(capsys):
     with pytest.raises(SystemExit):
-        cli.render(manuscript='examples/bar', target='default', verify=True)
+        cli.render(manuscript='examples/bar', target='default', publisher_root='.', render_root='.', verify=True)
     out, err = capsys.readouterr()
     parts = (
         'Note: Dry run - verification mode.',
@@ -63,8 +63,10 @@ def test_render(capsys):
         '{',
         '  "request_parameters": [',
         '    "verify",',
+        '    "."',
         '    "examples/bar",',
         '    "default"',
+        '    "."',
         '  ],',
         '  "processing_start": "',
         '  "manuscript": "bar",',

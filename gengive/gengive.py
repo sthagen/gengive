@@ -87,17 +87,18 @@ def variants_available(manuscript_path: PathType) -> Generator[str, None, None]:
             yield candidate.replace(BINDER_PREFIX, '').replace(BINDER_POSTFIX, '').lower()
 
 
-def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, PathType, str, str, str]:
+def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, PathType, str, str, str, PathType]:
     """Verify the request and yield the quadruplet of error code, message, root_path, manuscript, and variant.
     The shape of argv shall be verified already to contain manuscript and variant as the only two string items.
     If error code is 0 message is empty and manuscript as well as variant are valid.
     else error code can be used as process return code and message is non-empty.
     """
-    command, manuscript, variant = argv[:]
+    command, publisher_root_str, manuscript, variant, render_root_str = argv[:]
+    publisher_root = pathlib.Path(publisher_root_str)
+    render_root = pathlib.Path(render_root_str)
     if command == 'verify':
         print('Note: Dry run - verification mode.')
 
-    publisher_root = root_path
     if manuscript:
         m_path = pathlib.Path(manuscript)
         if m_path.is_dir():
@@ -112,7 +113,7 @@ def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, PathT
 
     if manuscript not in manuscripts:
         message = f'Document({manuscript}) is not available within publisher root {publisher_root}'
-        return 1, message, root_path, '', '', ''
+        return 1, message, publisher_root, '', '', '', render_root
 
     print(f'Identifying variants defined for document({manuscript}) ...')
     manuscript_path = publisher_root / manuscript
@@ -125,13 +126,13 @@ def parse_request(root_path: PathType, argv: List[str]) -> Tuple[int, str, PathT
             f'Target({variant}) is not defined for document({manuscript})'
             f' - you may want to add a {manuscript}/bind-{variant}.txt file'
         )
-        return 1, message, root_path, '', '', ''
+        return 1, message, publisher_root, '', '', '', render_root
 
     print(
         f'Requested rendering document({manuscript}) for target({variant})'
-        f' below {RENDER_ROOT}/render/{manuscript}/{variant}/ ...'
+        f' below {render_root}/render/{manuscript}/{variant}/ ...'
     )
-    return 0, '', publisher_root, command, manuscript, variant
+    return 0, '', publisher_root, command, manuscript, variant, render_root
 
 
 def load_config(config_folder: PathType, variant: str) -> Tuple[int, str, Dict[str, str]]:
@@ -279,7 +280,7 @@ def collect_asset_descriptions(media_selection, manuscript_path: PathType):  # t
         for path_str in sorted(pathlib.Path(manuscript_path / asset_folder_name).glob('**/*')):
             asset_path_str = str(pathlib.Path(asset_folder_name, path_str.name)).replace('\\', '/')
             if asset_path_str in media_selection:
-                src_path = manuscript_path / asset_folder_name / path_str
+                src_path = manuscript_path / asset_folder_name / path_str.name
                 a_hash, mod_at, size_bytes = describe_file(src_path)
                 asset_descriptions.append((asset_path_str, a_hash, mod_at, size_bytes))
                 if mod_at is None:
@@ -372,13 +373,13 @@ def main(argv: Union[List[str], None] = None) -> int:
     """Drive the request, discover, rendering, and reporting processes."""
     argv = sys.argv[1:] if argv is None else argv
 
-    if not argv or not isinstance(argv, list) or len(argv) != 3:
-        print('Usage: render <document> <target>')
+    if not argv or not isinstance(argv, list) or len(argv) != 5:
+        print('For usage info: render --help')
         return 2
 
     processing_start = dti.datetime.utcnow()
     root_path = workspace_path()
-    error_code, message, root_path, command, manuscript, variant = parse_request(root_path, argv)
+    error_code, message, root_path, command, manuscript, variant, render_path = parse_request(root_path, argv)
     if error_code:
         print(f'ERROR: {message}')
         return error_code
@@ -432,7 +433,7 @@ def main(argv: Union[List[str], None] = None) -> int:
     for rank, part in enumerate(binder, start=1):
         print(f'{rank :>2d}: {part}')
 
-    collation_folder = RENDER_ROOT / 'render' / manuscript / variant
+    collation_folder = render_path / 'render' / manuscript / variant
     collation_folder.mkdir(parents=True, exist_ok=True)
     collation_name = f'{render_config["name"]}.md'
     collation_path = collation_folder / collation_name

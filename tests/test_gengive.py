@@ -2,12 +2,16 @@
 # pylint: disable=line-too-long,missing-docstring,reimported,unused-import,unused-variable
 import pathlib
 
+import pytest
+
 import gengive.gengive as gg
 
 
 def test_gg_main():
-    inp = str(pathlib.Path('tests', 'fixtures', 'empty', 'advisory.json'))
-    assert gg.main(['verify', inp, '']) == 1
+    inp = str(pathlib.Path('tests', 'are', 'not', 'everything'))
+    message = r"\[Errno 2\] No such file or directory: 'tests/are/not/everything'"
+    with pytest.raises(FileNotFoundError, match=message):
+        gg.main(['verify', inp, '', '', '']) == 1
 
 
 def test_gg_verify_request_too_few():
@@ -19,15 +23,17 @@ def test_gg_verify_request_unknown_command():
 
 
 def test_gg_parse_request_falsy_input():
-    argv = ['verify', '', '']
-    error_code, message, root_path, command, manuscript, variant = gg.parse_request(gg.workspace_path(), argv)
+    argv = ['verify', '', '', '', '']
+    a_bunch = gg.parse_request(gg.workspace_path(), argv)
+    error_code, message, root_path, command, manuscript, variant, render_path = a_bunch
     assert error_code == 1
     message_start = 'Document() is not available within publisher root '
     assert message.startswith(message_start)
-    assert root_path == gg.workspace_path()
+    assert root_path == pathlib.Path('.')
     assert command == ''
     assert manuscript == ''
     assert variant == ''
+    assert render_path == pathlib.Path('.')
 
 
 def test_reader_empty():
