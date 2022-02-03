@@ -50,6 +50,17 @@ def test_render(capsys):
     with pytest.raises(SystemExit):
         cli.render(manuscript='examples/bar', target='default', publisher_root='.', render_root='.', verify=True)
     out, err = capsys.readouterr()
+    base64css = (
+        'aHRtbCB7Zm9udC1mYW1pbHk6ICJJVEMgRnJhbmtsaW4gR290aGljIFN0ZCBCayBDZCIsIFZlcmRhbmEsIEFyaWFsLCBzYW5zLXNlcml'
+        'mO30KYSB7Y29sb3I6ICMwYzJkODI7fQpiIHtmb250LXdlaWdodDogNjAwO30KaDEge2ZvbnQtd2VpZ2h0OiAzMDA7IHRleHQtdHJhbn'
+        'Nmb3JtOiBjYXBpdGFsaXplO30KaDIge2ZvbnQtd2VpZ2h0OiAyMDA7fQpsaSB7bGluZS1oZWlnaHQ6IDEuNTt9CnRhYmxlIHt0YWJsZ'
+        'S1sYXlvdXQ6IGZpeGVkOyB3aWR0aDogOTAlOyBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyBtYXJnaW46IDIwcHg7CmJvcmRlci1j'
+        'b2xsYXBzZTogY29sbGFwc2U7fQp0ZCwgdGgge3dvcmQtd3JhcDogYnJlYWstd29yZDsgYm9yZGVyOiBzb2xpZCAxcHggIzY2NjY2Njt'
+        '9CnRoIHtiYWNrZ3JvdW5kLWNvbG9yOiAjMGMyZDgyOyBjb2xvcjogI2ZmZmZmZjsgZm9udC1zaXplOiA3NSU7IGZvbnQtd2VpZ2h0Oi'
+        'AzMDA7fQp0ZCB7dmVydGljYWwtYWxpZ246IHRvcDsgZm9udC1zaXplOiA2NyU7IHBhZGRpbmc6IDJweDt9CnRhYmxlIGNhcHRpb24ge'
+        '2ZvbnQtc2l6ZTogMTIwJTsgbWFyZ2luLWJvdHRvbTogMjBweDt9CnRib2R5IHRyOm50aC1jaGlsZChvZGQpIHtiYWNrZ3JvdW5kLWNv'
+        'bG9yOiAjZGRkZGRkO30KdGJvZHkgdHI6bnRoLWNoaWxkKGV2ZW4pIHtiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO30K'
+    )
     parts = (
         'Note: Dry run - verification mode.',
         'Updating publisher root from ',
@@ -73,11 +84,13 @@ def test_render(capsys):
         '  "variant": "default",',
         '  "manuscript_path": "examples/bar",',
         '  "config_path": "examples/bar/render-config.json",',
-        '  "config_hash_sha256": "1a7de86e951d0d9374cee0dc1152fe781f16db072cb45985c300d4477374bd6e",',
+        '  "config_hash_sha256": "517504611aa99a0eae8b34721765904ac068119afa36ad60fe1e45a0956b7006",',
         '  "config_data_version": "',
-        '  "config_size_bytes": 59,',
+        '  "config_size_bytes": 92,',
         '  "render_config": {',
         '    "name": "the-name-of-the-thing"',
+        '    "css": "styles/default.css"',
+        f'    "css_declarations": "{base64css}"',
         '  },',
         '  "binder_path": "examples/bar/bind-default.txt",',
         '  "binder_hash_sha256": "38cf0d8e52b3020eb9e750c30998e1759657ad927462621ddd0b706b79a140c5",',
