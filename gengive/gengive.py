@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=expression-not-assigned,line-too-long
 """Render text (Danish: gengive tekst)."""
+import base64
 import datetime as dti
 import hashlib
 import json
@@ -157,6 +158,13 @@ def load_config(config_folder: PathType, variant: str) -> Tuple[int, str, Dict[s
     if ' ' in config['name']:
         return 1, f'The value of the {variant} "name" member SHALL NOT contain spaces in {config_path}', {}
 
+    if config.get('css'):
+        css_path = config_folder / config['css']
+        if not css_path.is_file():
+            return 1, f'The value of the {variant} "css" member if present SHALL be a file path {css_path}', {}
+        with open(css_path, 'rt', encoding=ENCODING) as handle:
+            config['css_declarations'] = handle.read()
+
     return 0, '', config
 
 
@@ -199,7 +207,7 @@ def bind_parts(binder: List[PathType], collation_path: PathType) -> List[str]:
     return in_mem_doc
 
 
-def render_html(collation_path: PathType, collation_name: str, html_path: PathType) -> None:
+def render_html(collation_path: PathType, collation_name: str, html_path: PathType, css: str) -> None:
     """Render the HTML from the markdown."""
     extensions = ['attr_list', 'codehilite', 'fenced_code', 'tables', 'toc']
 
@@ -214,20 +222,7 @@ def render_html(collation_path: PathType, collation_name: str, html_path: PathTy
         <meta name="description" content="Some Documents '{collation_name}'.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
           <style>
-            html {{font-family: "ITC Franklin Gothic Std Bk Cd", Verdana, Arial, sans-serif;}}
-            a {{color: #0c2d82;}}
-            b {{font-weight: 600;}}
-            h1 {{font-weight: 300; text-transform: capitalize;}}
-            h2 {{font-weight: 200;}}
-            li {{line-height: 1.5;}}
-            table {{table-layout: fixed; width: 90%; background-color: #ffffff; margin: 20px;
-              border-collapse: collapse;}}
-            td, th {{word-wrap: break-word; border: solid 1px #666666;}}
-            th {{background-color: #0c2d82; color: #ffffff; font-size: 75%; font-weight: 300;}}
-            td {{vertical-align: top; font-size: 67%; padding: 2px;}}
-            table caption {{font-size: 120%; margin-bottom: 20px;}}
-            tbody tr:nth-child(odd) {{background-color: #dddddd;}}
-            tbody tr:nth-child(even) {{background-color: #ffffff;}}
+            {css}
           </style>
         <title>{collation_name}</title>
       </head>
@@ -394,6 +389,9 @@ def main(argv: Union[List[str], None] = None) -> int:
     if error_code:
         print(f'ERROR: {message}')
         return error_code
+    css = render_config.get('css_declarations', '')
+    if css:
+        render_config['css_declarations'] = base64.b64encode(css.encode(ENCODING)).decode(ENCODING)
     a_path = manuscript_path / CONFIG_NAME
     a_hash, mod_at, size_bytes = describe_file(a_path)
     if mod_at is None:
@@ -468,7 +466,7 @@ def main(argv: Union[List[str], None] = None) -> int:
     print(f'Writing HTML rendition from ({manuscript}) for target({variant}) to {html_path} ...')
 
     print(f'Creating HTML rendition of document({manuscript}) for target({variant}) below {html_folder}/ ...')
-    render_html(collation_path, collation_name, html_path)
+    render_html(collation_path, collation_name, html_path, css=css)
     a_hash, mod_at, size_bytes = describe_file(html_path)
     if mod_at is None:
         print(f'ERROR: rendered HTML file ({html_path}) is not accessible for report of request?')
