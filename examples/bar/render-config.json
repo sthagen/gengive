@@ -1,5 +1,6 @@
 {
   "default": {
-    "name": "the-name-of-the-thing"
+    "name": "the-name-of-the-thing",
+    "css": "styles/default.css"
   }
 }

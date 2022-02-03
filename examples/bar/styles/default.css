@@ -1,0 +1,14 @@
+html {font-family: "ITC Franklin Gothic Std Bk Cd", Verdana, Arial, sans-serif;}
+a {color: #0c2d82;}
+b {font-weight: 600;}
+h1 {font-weight: 300; text-transform: capitalize;}
+h2 {font-weight: 200;}
+li {line-height: 1.5;}
+table {table-layout: fixed; width: 90%; background-color: #ffffff; margin: 20px;
+border-collapse: collapse;}
+td, th {word-wrap: break-word; border: solid 1px #666666;}
+th {background-color: #0c2d82; color: #ffffff; font-size: 75%; font-weight: 300;}
+td {vertical-align: top; font-size: 67%; padding: 2px;}
+table caption {font-size: 120%; margin-bottom: 20px;}
+tbody tr:nth-child(odd) {background-color: #dddddd;}
+tbody tr:nth-child(even) {background-color: #ffffff;}
