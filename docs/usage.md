@@ -23,7 +23,7 @@ Commands:
 
 ```console
 $ gengive version
-Render text (Danish: gengive tekst). version 2022.2.2
+Render text (Danish: gengive tekst). version 2022.2.3
 ```
 
 ## Render command

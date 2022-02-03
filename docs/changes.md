@@ -1,5 +1,9 @@
 # Change History
 
+## 2022.2.3
+
+* Separated the style from the renderer (implementation of enhancement #7)
+
 ## 2022.2.2
 
 * Added publisher and render root options to the render command (additional fix of issue #4)
