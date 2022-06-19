@@ -134,3 +134,4 @@ local_publi.sh
 *.pdf
 *.html
 render/
+.vscode/
