@@ -1,4 +1,4 @@
-markdown>=3.3.6
-pandoc>=2.0.1
-pydantic>=1.8.2
-typer>=0.4.0
+markdown==3.3.7
+pandoc==2.2
+pydantic==1.9.1
+typer==0.4.1
