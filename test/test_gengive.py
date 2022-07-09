@@ -8,8 +8,8 @@ import gengive.gengive as gg
 
 
 def test_gg_main():
-    inp = str(pathlib.Path('tests', 'are', 'not', 'everything'))
-    message = r"\[Errno 2\] No such file or directory: 'tests/are/not/everything'"
+    inp = str(pathlib.Path('test', 'are', 'not', 'everything'))
+    message = r"\[Errno 2\] No such file or directory: 'test/are/not/everything'"
     with pytest.raises(FileNotFoundError, match=message):
         gg.main(['verify', inp, '', '', '']) == 1
 
@@ -37,5 +37,5 @@ def test_gg_parse_request_falsy_input():
 
 
 def test_reader_empty():
-    inp = str(pathlib.Path('tests', '__init__.py'))
+    inp = str(pathlib.Path('test', '__init__.py'))
     assert next(gg.reader(inp)).strip() == '# -*- coding: utf-8 -*-'
