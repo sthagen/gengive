@@ -2,18 +2,18 @@ SHELL = /bin/bash
 package = shagen/gengive
 
 .DEFAULT_GOAL := all
-isort = isort gengive tests
-black = black -S -l 120 --target-version py38 gengive tests
+isort = isort gengive test
+black = black -S -l 120 --target-version py38 gengive test
 
 .PHONY: install
 install:
 	pip install -U pip wheel
-	pip install -r tests/requirements.txt
+	pip install -r test/requirements.txt
 	pip install -U .
 
 .PHONY: install-all
 install-all: install
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: format
 format:
@@ -22,13 +22,13 @@ format:
 
 .PHONY: init
 init:
-	pip install -r tests/requirements.txt
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	flake8 gengive/ tests/
+	flake8 gengive/ test/
 	$(isort) --check-only --df
 	$(black) --check --diff
 
