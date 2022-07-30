@@ -25,19 +25,15 @@ theme:
 extra:
   generator: false
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/sthagen/gengive
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/gengive
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/shagen/gengive
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/shage
 
 copyright: Copyright &copy; 2022 Stefan Hagen under the MIT license
 
-repo_name: sthagen/gengive
-repo_url: https://github.com/sthagen/gengive
+repo_name: ~sthagen/gengive
+repo_url: https://git.sr.ht/~sthagen/gengive
 edit_uri: ""
 
 plugins:
