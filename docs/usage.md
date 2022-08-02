@@ -1,4 +1,6 @@
-# Example Usage
+# Usage
+
+## Example 
 
 Maybe not yet ... but if you insist:
 
