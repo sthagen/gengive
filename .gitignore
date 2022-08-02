@@ -127,12 +127,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-local_publi.sh
+
+# Local development artifacts
+*~
+.idea
+*.log
+local*
+.vscode/
+current-bandit.json
+tmp*
+foo
+
+# Special repo ignores:
 *.aux
 *.dvi
 *.latex
 *.pdf
 *.html
 render/
-.vscode/
-local_*
+
