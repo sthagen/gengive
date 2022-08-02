@@ -1,0 +1,50 @@
+[
+  {
+    "Author": "Manfred Stienstra, Yuri takhteyev and Waylan limberg",
+    "Description": "Python implementation of Markdown.",
+    "License": "BSD License",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.5/envs/gengive-3-10-5/lib/python3.10/site-packages/Markdown-3.3.7.dist-info/LICENSE.md",
+    "LicenseText": "Copyright 2007, 2008 The Python Markdown Project (v. 1.7 and later)\nCopyright 2004, 2005, 2006 Yuri Takhteyev (v. 0.2-1.6b)\nCopyright 2004 Manfred Stienstra (the original version)\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright\n  notice, this list of conditions and the following disclaimer.\n* Redistributions in binary form must reproduce the above copyright\n  notice, this list of conditions and the following disclaimer in the\n  documentation and/or other materials provided with the distribution.\n* Neither the name of the Python Markdown Project nor the\n  names of its contributors may be used to endorse or promote products\n  derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE PYTHON MARKDOWN PROJECT ''AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL ANY CONTRIBUTORS TO THE PYTHON MARKDOWN PROJECT\nBE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\nCONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\nSUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\nINTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\nCONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\nARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\nPOSSIBILITY OF SUCH DAMAGE.\n",
+    "Name": "Markdown",
+    "NoticeFile": "UNKNOWN",
+    "NoticeText": "UNKNOWN",
+    "URL": "https://Python-Markdown.github.io/",
+    "Version": "3.3.7"
+  },
+  {
+    "Author": "S\u00e9bastien Boisg\u00e9rault",
+    "Description": "Pandoc Documents for Python",
+    "License": "MIT License",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.5/envs/gengive-3-10-5/lib/python3.10/site-packages/pandoc-2.2.dist-info/LICENSE",
+    "LicenseText": "Copyright 2014-2021 S\u00e9bastien Boisg\u00e9rault (Sebastien.Boisgerault@mines-paristech.fr)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of \nthis software and associated documentation files (the \"Software\"), to deal in \nthe Software without restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell copies of the\nSoftware, and to permit persons to whom the Software is furnished to do so, \nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all \ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\nINCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION \nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "Name": "pandoc",
+    "NoticeFile": "UNKNOWN",
+    "NoticeText": "UNKNOWN",
+    "URL": "UNKNOWN",
+    "Version": "2.2"
+  },
+  {
+    "Author": "Samuel Colvin",
+    "Description": "Data validation and settings management using python type hints",
+    "License": "MIT License",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.5/envs/gengive-3-10-5/lib/python3.10/site-packages/pydantic-1.9.1.dist-info/LICENSE",
+    "LicenseText": "The MIT License (MIT)\n\nCopyright (c) 2017, 2018, 2019, 2020, 2021 Samuel Colvin and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "Name": "pydantic",
+    "NoticeFile": "UNKNOWN",
+    "NoticeText": "UNKNOWN",
+    "URL": "https://github.com/samuelcolvin/pydantic",
+    "Version": "1.9.1"
+  },
+  {
+    "Author": "Sebasti\u00e1n Ram\u00edrez",
+    "Description": "Typer, build great CLIs. Easy to code. Based on Python type hints.",
+    "License": "MIT License",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.5/envs/gengive-3-10-5/lib/python3.10/site-packages/typer-0.4.2.dist-info/LICENSE",
+    "LicenseText": "The MIT License (MIT)\n\nCopyright (c) 2019 Sebasti\u00e1n Ram\u00edrez\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "Name": "typer",
+    "NoticeFile": "UNKNOWN",
+    "NoticeText": "UNKNOWN",
+    "URL": "https://github.com/tiangolo/typer",
+    "Version": "0.4.2"
+  }
+]
