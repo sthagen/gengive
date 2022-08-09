@@ -16,7 +16,7 @@ User and developer [documentation of gengive](https://codes.dilettant.life/docs/
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of gengive](https://todo.sr.ht/~sthagen/gengive).
+Feature requests and bug reports are best entered in the [todos of gengive](https://todo.sr.ht/~sthagen/gengive).
 
 ## Primary Source repository
 
