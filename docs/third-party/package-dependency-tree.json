@@ -2,8 +2,8 @@
     {
         "key": "markdown",
         "package_name": "Markdown",
-        "installed_version": "3.3.7",
-        "required_version": "3.3.7",
+        "installed_version": "3.4.1",
+        "required_version": "3.4.1",
         "dependencies": []
     },
     {
@@ -31,8 +31,8 @@
     {
         "key": "pydantic",
         "package_name": "pydantic",
-        "installed_version": "1.9.1",
-        "required_version": "1.9.1",
+        "installed_version": "1.9.2",
+        "required_version": "1.9.2",
         "dependencies": [
             {
                 "key": "typing-extensions",
@@ -46,8 +46,8 @@
     {
         "key": "typer",
         "package_name": "typer",
-        "installed_version": "0.4.2",
-        "required_version": "0.4.2",
+        "installed_version": "0.6.1",
+        "required_version": "0.6.1",
         "dependencies": [
             {
                 "key": "click",
