@@ -7,25 +7,27 @@ Maybe not yet ... but if you insist:
 ## Call without arguments
 
 ```console
-$ gengive
-Usage: gengive [OPTIONS] COMMAND [ARGS]...
+❯ gengive
 
-  Render text (Danish: gengive tekst).
+ Usage: gengive [OPTIONS] COMMAND [ARGS]...
 
-Options:
-  -V, --version  Display the gengive version and exit  [default: False]
-  -h, --help     Show this message and exit.
+ Render text (Danish: gengive tekst).
 
-Commands:
-  render   render the manuscript for target.
-  version  Display the gengive version and exit
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --version  -V        Display the gengive version and exit                                              │
+│ --help     -h        Show this message and exit.                                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ─────────────────────────────────────────────────────────────────────────────────────────────╮
+│ render              render the manuscript for target.                                                  │
+│ version             Display the gengive version and exit                                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ## Version command
 
 ```console
-$ gengive version
-Render text (Danish: gengive tekst). version 2022.2.3
+❯ gengive version
+Render text (Danish: gengive tekst). version 2022.11.28+parent.a11a1ad1
 ```
 
 ## Render command
@@ -33,36 +35,33 @@ Render text (Danish: gengive tekst). version 2022.2.3
 ### Help
 
 ```console
-$ gengive render --help
-Usage: gengive render [OPTIONS] [SOURCE]
+❯ gengive render --help
 
-  render the manuscript for target.
+ Usage: gengive render [OPTIONS] [SOURCE]
 
-Arguments:
-  [SOURCE]  [default: ]
+ render the manuscript for target.
 
-Options:
-  -m, --manuscript <manuscript>  Path to or name of input manuscript folder
-                                 (no default)  [default: ]
-
-  -t, --target target            Target facet to render manuscript as (default
-                                 is default)  [default: default]
-
-  -p, --publisher-root target    Publisher root (default is /somewhere)
-                                 [default: /somewhere]
-
-  -r, --render-root target       Render root (default is /somewhere)
-                                 [default: /somewhere]
-
-  -n, --dry-run                  Dry run (default is False)  [default: False]
-  -h, --help                     Show this message and exit.
+╭─ Arguments ────────────────────────────────────────────────────────────────────────────────────────────╮
+│   source      [SOURCE]                                                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --manuscript      -m      <manuscript>  Path to or name of input manuscript folder (no default)        │
+│ --target          -t      target        Target facet to render manuscript as (default is default)      │
+│                                         [default: default]                                             │
+│ --publisher-root  -p      target        Publisher root (default is /Users/ruth/d/gh/sha/src/gengive)   │
+│                                         [default: /Users/ruth/d/gh/sha/src/gengive]                    │
+│ --render-root     -r      target        Render root (default is /Users/ruth/d/gh/sha/src/gengive)      │
+│                                         [default: /Users/ruth/d/gh/sha/src/gengive]                    │
+│ --dry-run         -n                    Dry run (default is False)                                     │
+│ --help            -h                    Show this message and exit.                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 ```
 
 ### Dry run
 
 ```console
-$ gengive render examples/bar/ --dry-run
+❯ gengive render examples/bar/ --dry-run
 Note: Dry run - verification mode.
 Updating publisher root from /somewhere to examples ...
 Retrieving manuscript folders below publisher root examples ...
@@ -106,7 +105,7 @@ Binder analysis OK, all files resolve. Sequence of binding will be:
 Another variant using environment variables to specify publisher and render root:
 
 ```console
-$ GENGIVE_PUBLISHER_ROOT=./examples GENGIVE_RENDER_ROOT=. \
+❯ GENGIVE_PUBLISHER_ROOT=./examples GENGIVE_RENDER_ROOT=. \
   gengive render --manuscript bar --target default
 Retrieving manuscript folders below publisher root examples ...
 - bar
@@ -125,7 +124,7 @@ Done. Entrypoint is examples/render/bar/default/html/the-name-of-the-thing.html
 ```
 
 ```console
-$ tree render/bar/default
+❯ tree render/bar/default
 render/bar/default
 ├── html
 │   ├── images
@@ -138,7 +137,7 @@ render/bar/default
 ```
 
 ```console
-$ cat render/bar/default/render-info.json
+❯ cat render/bar/default/render-info.json
 {
   "request_parameters": [
     "render",
@@ -192,12 +191,12 @@ $ cat render/bar/default/render-info.json
 ```
 
 ```console
-$ cat examples/bar/bind-default.txt
+❯ cat examples/bar/bind-default.txt
 foo.md
 ```
 
 ```console
-$ cat examples/bar/render-config.json
+❯ cat examples/bar/render-config.json
 {
   "default": {
     "name": "the-name-of-the-thing"
@@ -206,7 +205,7 @@ $ cat examples/bar/render-config.json
 ```
 
 ```console
-$ cat examples/bar/foo.md
+❯ cat examples/bar/foo.md
 # Heading Wun
 
 We talk from time to time.
@@ -248,7 +247,7 @@ End.
 ```
 
 ```console
-$ cat render/bar/default/the-name-of-the-thing.md
+❯ cat render/bar/default/the-name-of-the-thing.md
 # Heading Wun
 
 We talk from time to time.
@@ -290,7 +289,7 @@ End.
 ```
 
 ```console
-$ cat render/bar/default/html/the-name-of-the-thing.html
+❯ cat render/bar/default/html/the-name-of-the-thing.html
 <!DOCTYPE html>
     <html lang="en">
       <head>
