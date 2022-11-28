@@ -1,9 +1,14 @@
 # Change History
 
+## 2022.11.28
+
+* Bumped dependencies
+* Bumped python version range to (3.9, 3.10, 3.11)
+
 ## 2022.8.2
 
 * Migrated upstream away from github
-* Added third-party sofware documentation
+* Added third-party software documentation
 * Added SBOM
 * Bumped development and test dependencies
 * Added test coverage documentation
