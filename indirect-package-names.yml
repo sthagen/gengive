@@ -1,0 +1,6 @@
+---
+packages:
+- click
+- plumbum
+- ply
+- typing-extensions
