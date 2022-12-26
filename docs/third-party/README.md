@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://github.com/sthagen/pilli/blob/default/sbom.json) with SHA256 checksum ([49132fee ...](https://raw.githubusercontent.com/sthagen/pilli/default/sbom.json.sha256 "sha256:49132feef377c9dacaa2dbfda7ad0b6a5326ff024e072df286ce4bd808cf4ffe")).
-<!--[[[end]]] (checksum: 334359a0f1cbf564a35b78eedf2106dd)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://github.com/sthagen/pilli/blob/default/sbom.json) with SHA256 checksum ([ed2590c8 ...](https://raw.githubusercontent.com/sthagen/pilli/default/sbom.json.sha256 "sha256:ed2590c87a62aa583559d4d13526f94494366c79259865bb64eb5e82675379b3")).
+<!--[[[end]]] (checksum: c2cf3c1f7f16d35ec5dc2fba48c2c26e)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -10,13 +10,13 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 ### Direct Dependencies
 
 <!--[[[fill direct_dependencies_table()]]]-->
-| Name                                             | Version                                             | License     | Author                                               | Description (from packaging data)                                  |
-|:-------------------------------------------------|:----------------------------------------------------|:------------|:-----------------------------------------------------|:-------------------------------------------------------------------|
-| [Markdown](https://Python-Markdown.github.io/)   | [3.3.7](https://pypi.org/project/Markdown/3.3.7/)   | BSD License | Manfred Stienstra, Yuri takhteyev and Waylan limberg | Python implementation of Markdown.                                 |
-| [pydantic](https://github.com/pydantic/pydantic) | [1.10.2](https://pypi.org/project/pydantic/1.10.2/) | MIT License | Samuel Colvin                                        | Data validation and settings management using python type hints    |
-| [typer](https://github.com/tiangolo/typer)       | [0.7.0](https://pypi.org/project/typer/0.7.0/)      | MIT License | Sebastián Ramírez                                    | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-| pandoc                                           | [2.3](https://pypi.org/project/pandoc/2.3/)         | MIT License | Sébastien Boisgérault                                | Pandoc Documents for Python                                        |
-<!--[[[end]]] (checksum: aa318397ee124d7af6ed3dfb4c5c4b62)-->
+| Name                                                               | Version                                             | License     | Author                                               | Description (from packaging data)                                  |
+|:-------------------------------------------------------------------|:----------------------------------------------------|:------------|:-----------------------------------------------------|:-------------------------------------------------------------------|
+| [Markdown](https://Python-Markdown.github.io/)                     | [3.3.7](https://pypi.org/project/Markdown/3.3.7/)   | BSD License | Manfred Stienstra, Yuri takhteyev and Waylan limberg | Python implementation of Markdown.                                 |
+| [pandoc](https://github.com/boisgera/pandoc/blob/master/README.md) | [2.3](https://pypi.org/project/pandoc/2.3/)         | MIT License | Sébastien Boisgérault                                | Pandoc Documents for Python                                        |
+| [pydantic](https://github.com/pydantic/pydantic)                   | [1.10.2](https://pypi.org/project/pydantic/1.10.2/) | MIT License | Samuel Colvin                                        | Data validation and settings management using python type hints    |
+| [typer](https://github.com/tiangolo/typer)                         | [0.7.0](https://pypi.org/project/typer/0.7.0/)      | MIT License | Sebastián Ramírez                                    | Typer, build great CLIs. Easy to code. Based on Python type hints. |
+<!--[[[end]]] (checksum: f59afc35fde7d289fd295c97ba51eb53)-->
 
 ### Indirect Dependencies
 
