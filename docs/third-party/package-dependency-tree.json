@@ -2,8 +2,8 @@
     {
         "key": "markdown",
         "package_name": "Markdown",
-        "installed_version": "3.4.1",
-        "required_version": "3.4.1",
+        "installed_version": "3.3.7",
+        "required_version": "3.3.7",
         "dependencies": []
     },
     {
@@ -15,7 +15,7 @@
             {
                 "key": "plumbum",
                 "package_name": "plumbum",
-                "installed_version": "1.7.2",
+                "installed_version": "1.8.0",
                 "required_version": "Any",
                 "dependencies": []
             },
@@ -37,7 +37,7 @@
             {
                 "key": "typing-extensions",
                 "package_name": "typing-extensions",
-                "installed_version": "4.2.0",
+                "installed_version": "4.4.0",
                 "required_version": ">=4.1.0",
                 "dependencies": []
             }
