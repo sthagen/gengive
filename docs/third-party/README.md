@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/sbom.json) with SHA256 checksum ([46437107 ...](https://git.sr.ht/~sthagen/gengive/blob/default/sbom.json.sha256 "sha256:4643710769466c4014a0705381e9d15f3d69624c5e299261547114b031767036")).
-<!--[[[end]]] (checksum: dee241792e685b1cf7ee0c2796089843)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/sbom.json) with SHA256 checksum ([ee2cb510 ...](https://git.sr.ht/~sthagen/gengive/blob/default/sbom.json.sha256 "sha256:ee2cb5108b107605af08dfa4eceaaa1168549bf1a1dd8b92aa54755473072af1")).
+<!--[[[end]]] (checksum: 6fb517154f8f80dfd45012ba04f04ebd)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -12,11 +12,11 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 <!--[[[fill direct_dependencies_table()]]]-->
 | Name                                                               | Version                                             | License     | Author                                               | Description (from packaging data)                                  |
 |:-------------------------------------------------------------------|:----------------------------------------------------|:------------|:-----------------------------------------------------|:-------------------------------------------------------------------|
-| [Markdown](https://Python-Markdown.github.io/)                     | [3.4.1](https://pypi.org/project/Markdown/3.4.1/)   | BSD License | Manfred Stienstra, Yuri takhteyev and Waylan limberg | Python implementation of Markdown.                                 |
+| [Markdown](https://Python-Markdown.github.io/)                     | [3.3.7](https://pypi.org/project/Markdown/3.3.7/)   | BSD License | Manfred Stienstra, Yuri takhteyev and Waylan limberg | Python implementation of Markdown.                                 |
 | [pandoc](https://github.com/boisgera/pandoc/blob/master/README.md) | [2.3](https://pypi.org/project/pandoc/2.3/)         | MIT License | Sébastien Boisgérault                                | Pandoc Documents for Python                                        |
-| [pydantic](https://github.com/pydantic/pydantic)                   | [1.10.3](https://pypi.org/project/pydantic/1.10.3/) | MIT License | Samuel Colvin                                        | Data validation and settings management using python type hints    |
+| [pydantic](https://github.com/pydantic/pydantic)                   | [1.10.4](https://pypi.org/project/pydantic/1.10.4/) | MIT License | Samuel Colvin                                        | Data validation and settings management using python type hints    |
 | [typer](https://github.com/tiangolo/typer)                         | [0.7.0](https://pypi.org/project/typer/0.7.0/)      | MIT License | Sebastián Ramírez                                    | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 0d2498e9365c4605facbce5edbdaebd1)-->
+<!--[[[end]]] (checksum: 4823dca1260c1c4915a0f7924dc16c60)-->
 
 ### Indirect Dependencies
 
@@ -42,13 +42,13 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
-Markdown==3.4.1
+Markdown==3.3.7
 pandoc==2.3
   - plumbum [required: Any, installed: 1.8.0]
   - ply [required: Any, installed: 3.11]
-pydantic==1.10.3
-  - typing-extensions [required: >=4.1.0, installed: 4.4.0]
+pydantic==1.10.4
+  - typing-extensions [required: >=4.2.0, installed: 4.4.0]
 typer==0.7.0
   - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
 ````
-<!--[[[end]]] (checksum: 2eea4fe314da3724c413db78b0d3b508)-->
+<!--[[[end]]] (checksum: e9827d7b14ee7efc9e3597395b90963e)-->
