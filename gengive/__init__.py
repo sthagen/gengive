@@ -15,8 +15,8 @@ DEFAULT_CONFIG_NAME = '.gengive.json'
 DEFAULT_LF_ONLY = 'YES'
 
 # [[[fill git_describe()]]]
-__version__ = '2022.11.28+parent.a11a1ad1'
-# [[[end]]] (checksum: 5ab1f5b5be679090479cca5ee795b198)
+__version__ = '2023.6.19+parent.365b32fd'
+# [[[end]]] (checksum: 9dc45f1fac14aaef6add1a675c4d9f13)
 __version_info__ = tuple(
     e if '-' not in e else e.split('-')[0] for part in __version__.split('+') for e in part.split('.') if e != 'parent'
 )
