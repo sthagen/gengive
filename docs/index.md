@@ -11,10 +11,7 @@ Third party dependencies are documented in the folder [third-party](third-party/
 [![wheel](https://img.shields.io/pypi/wheel/gengive.svg?style=flat)](https://pypi.python.org/pypi/gengive/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/gengive.svg?style=flat)](https://pypi.python.org/pypi/gengive/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/gengive.svg?style=flat)](https://pypi.python.org/pypi/gengive/)
-
-## Documentation
-
-User and developer [documentation of gengive](https://codes.dilettant.life/docs/gengive).
+[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/gengive.svg?style=flat)](https://git.sr.ht/~sthagen/gengive/log)
 
 ## Bug Tracker
 
