@@ -1,0 +1,14 @@
+name: gengive
+description: Render text (Danish: gengive tekst).
+license_spdx: MIT
+version: 2023.6.19
+spec_version: 1.0
+home_url: https://git.sr.ht/~sthagen/gengive
+news_url: https://libraries.io/pypi/gengive/versions.atom
+date: 2023-06-19
+about_resource: ./
+libraries_io_url: https://libraries.io/pypi/gengive?number=2023.6.19
+vcs_tool: git
+vcs_repository: https://git.sr.ht/~sthagen/gengive
+vcs_branch: default
+
