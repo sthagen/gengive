@@ -1,5 +1,7 @@
 site_name: Gengive
 site_description: "Render text (Danish: gengive tekst)."
+docs_dir: ../docs
+site_dir: ../site
 
 theme:
   name: 'material'
