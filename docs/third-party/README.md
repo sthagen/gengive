@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/sbom/cdx.json) with SHA256 checksum ([24aeeceb ...](https://git.sr.ht/~sthagen/gengive/blob/default/sbom/cdx.json.sha256 "sha256:24aeecebb1b2d2cf22ecaadb8b2d7b800b7fb125cc89197b635ddd45e8138c3e")).
-<!--[[[end]]] (checksum: 8a1269e3180a4827083506f248beb454)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/sbom/cdx.json) with SHA256 checksum ([c3efc9b6 ...](https://git.sr.ht/~sthagen/gengive/blob/default/sbom/cdx.json.sha256 "sha256:c3efc9b622ca625d56ba85b9bd959b86135d2255934d6545a6eb6c33e49d44c8")).
+<!--[[[end]]] (checksum: a1ebe8ccc4384f764f4e5e753c5845fc)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -23,11 +23,11 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 <!--[[[fill indirect_dependencies_table()]]]-->
 | Name                                                             | Version                                                    | License                            | Author                                                                                | Description (from packaging data)                      |
 |:-----------------------------------------------------------------|:-----------------------------------------------------------|:-----------------------------------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [click](https://palletsprojects.com/p/click/)                    | [8.1.3](https://pypi.org/project/click/8.1.3/)             | BSD License                        | Armin Ronacher                                                                        | Composable command line interface toolkit              |
-| [plumbum](https://plumbum.readthedocs.io)                        | [1.8.0](https://pypi.org/project/plumbum/1.8.0/)           | MIT License                        | Tomer Filiba                                                                          | Plumbum: shell combinators library                     |
+| [click](https://palletsprojects.com/p/click/)                    | [8.1.5](https://pypi.org/project/click/8.1.5/)             | BSD License                        | UNKNOWN                                                                               | Composable command line interface toolkit              |
+| [plumbum](https://github.com/tomerfiliba/plumbum)                | [1.8.2](https://pypi.org/project/plumbum/1.8.2/)           | MIT License                        | Tomer Filiba <tomerfiliba@gmail.com>                                                  | Plumbum: shell combinators library                     |
 | [ply](http://www.dabeaz.com/ply/)                                | [3.11](https://pypi.org/project/ply/3.11/)                 | BSD                                | David Beazley                                                                         | Python Lex & Yacc                                      |
-| [typing_extensions](https://github.com/python/typing_extensions) | [4.4.0](https://pypi.org/project/typing_extensions/4.4.0/) | Python Software Foundation License | "Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee" <levkivskyi@gmail.com> | Backported and Experimental Type Hints for Python 3.7+ |
-<!--[[[end]]] (checksum: 41140480856314620a18a0004f788c89)-->
+| [typing_extensions](https://github.com/python/typing_extensions) | [4.7.1](https://pypi.org/project/typing_extensions/4.7.1/) | Python Software Foundation License | "Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee" <levkivskyi@gmail.com> | Backported and Experimental Type Hints for Python 3.7+ |
+<!--[[[end]]] (checksum: b43c2a174339e68896d5aee47e1967fd)-->
 
 ## Dependency Tree(s)
 
@@ -45,12 +45,12 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 ````console
 Markdown==3.3.7
 pandoc==2.3
-├── plumbum [required: Any, installed: 1.8.0]
+├── plumbum [required: Any, installed: 1.8.2]
 └── ply [required: Any, installed: 3.11]
 pydantic==1.10.10
-└── typing-extensions [required: >=4.2.0, installed: 4.4.0]
+└── typing-extensions [required: >=4.2.0, installed: 4.7.1]
 typer==0.9.0
-├── click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
-└── typing-extensions [required: >=3.7.4.3, installed: 4.4.0]
+├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
+└── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: 29c5b630b4a2f57e628eee7b5531c9e4)-->
+<!--[[[end]]] (checksum: d69092266dfb2ce11240306f52356fbd)-->
