@@ -2,8 +2,8 @@
     {
         "key": "markdown",
         "package_name": "Markdown",
-        "installed_version": "3.3.7",
-        "required_version": "3.3.7",
+        "installed_version": "3.4.4",
+        "required_version": "3.4.4",
         "dependencies": []
     },
     {
@@ -31,8 +31,8 @@
     {
         "key": "pydantic",
         "package_name": "pydantic",
-        "installed_version": "2.3.0",
-        "required_version": "2.3.0",
+        "installed_version": "2.4.0",
+        "required_version": "2.4.0",
         "dependencies": [
             {
                 "key": "annotated-types",
@@ -44,8 +44,8 @@
             {
                 "key": "pydantic-core",
                 "package_name": "pydantic-core",
-                "installed_version": "2.6.3",
-                "required_version": "==2.6.3",
+                "installed_version": "2.10.0",
+                "required_version": "==2.10.0",
                 "dependencies": [
                     {
                         "key": "typing-extensions",
