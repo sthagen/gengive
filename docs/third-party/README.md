@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([1dde47aa ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:1dde47aa7f36fcea13b13edfb0b717af699a207b8b5bb85c380d7e4f4de1f250")).
-<!--[[[end]]] (checksum: 6160bcd0cfcc534dcf0c38f28697e1ae)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([a564faac ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:a564faac8282fcf96972c4b7dbaa388af55cc109f110d0848295087235ac17c9")).
+<!--[[[end]]] (checksum: 0136f51cf03180db3aee192b9f0a8440)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -14,9 +14,9 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 |:-------------------------------------------------------------------|:--------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
 | [Markdown](https://Python-Markdown.github.io/)                     | [3.4.4](https://pypi.org/project/Markdown/3.4.4/) | BSD License | Manfred Stienstra, Yuri Takhteyev                                                                                                                                                                                                                             | Python implementation of John Gruber's Markdown.                   |
 | [pandoc](https://github.com/boisgera/pandoc/blob/master/README.md) | [2.3](https://pypi.org/project/pandoc/2.3/)       | MIT License | Sébastien Boisgérault                                                                                                                                                                                                                                         | Pandoc Documents for Python                                        |
-| [pydantic](https://github.com/pydantic/pydantic)                   | [2.4.1](https://pypi.org/project/pydantic/2.4.1/) | MIT License | Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev> | Data validation using Python type hints                            |
+| [pydantic](https://github.com/pydantic/pydantic)                   | [2.4.2](https://pypi.org/project/pydantic/2.4.2/) | MIT License | Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev> | Data validation using Python type hints                            |
 | [typer](https://github.com/tiangolo/typer)                         | [0.9.0](https://pypi.org/project/typer/0.9.0/)    | MIT License | Sebastián Ramírez                                                                                                                                                                                                                                             | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 50371ac05455007e13bbc9642983ac9e)-->
+<!--[[[end]]] (checksum: 881a55d1a7bdf577241f2c15df280188)-->
 
 ### Indirect Dependencies
 
@@ -47,7 +47,7 @@ Markdown==3.4.4
 pandoc==2.3
 ├── plumbum [required: Any, installed: 1.8.2]
 └── ply [required: Any, installed: 3.11]
-pydantic==2.4.1
+pydantic==2.4.2
 ├── annotated-types [required: >=0.4.0, installed: 0.5.0]
 ├── pydantic-core [required: ==2.10.1, installed: 2.10.1]
 │   └── typing-extensions [required: >=4.6.0,!=4.7.0, installed: 4.7.1]
@@ -56,4 +56,4 @@ typer==0.9.0
 ├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
 └── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: 74ee28b527df2eb5001f430e3e44df3f)-->
+<!--[[[end]]] (checksum: 27ef106baf35acd8e04438f2c2c4237f)-->
