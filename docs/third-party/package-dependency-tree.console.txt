@@ -1,4 +1,4 @@
-Markdown==3.4.4
+Markdown==3.5
 pandoc==2.3
 ├── plumbum [required: Any, installed: 1.8.2]
 └── ply [required: Any, installed: 3.11]

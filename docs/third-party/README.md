@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([a564faac ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:a564faac8282fcf96972c4b7dbaa388af55cc109f110d0848295087235ac17c9")).
-<!--[[[end]]] (checksum: 0136f51cf03180db3aee192b9f0a8440)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([a06c04ad ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:a06c04ad2d6b80dd349f2a1b5613627da13f8213dd6fdf8ae40542104c084986")).
+<!--[[[end]]] (checksum: f02476a39390bc7e47e0790864c46451)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -12,11 +12,11 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 <!--[[[fill direct_dependencies_table()]]]-->
 | Name                                                               | Version                                           | License     | Author                                                                                                                                                                                                                                                        | Description (from packaging data)                                  |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
-| [Markdown](https://Python-Markdown.github.io/)                     | [3.4.4](https://pypi.org/project/Markdown/3.4.4/) | BSD License | Manfred Stienstra, Yuri Takhteyev                                                                                                                                                                                                                             | Python implementation of John Gruber's Markdown.                   |
+| [Markdown](https://Python-Markdown.github.io/)                     | [3.5](https://pypi.org/project/Markdown/3.5/)     | BSD License | Manfred Stienstra, Yuri Takhteyev                                                                                                                                                                                                                             | Python implementation of John Gruber's Markdown.                   |
 | [pandoc](https://github.com/boisgera/pandoc/blob/master/README.md) | [2.3](https://pypi.org/project/pandoc/2.3/)       | MIT License | Sébastien Boisgérault                                                                                                                                                                                                                                         | Pandoc Documents for Python                                        |
 | [pydantic](https://github.com/pydantic/pydantic)                   | [2.4.2](https://pypi.org/project/pydantic/2.4.2/) | MIT License | Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev> | Data validation using Python type hints                            |
 | [typer](https://github.com/tiangolo/typer)                         | [0.9.0](https://pypi.org/project/typer/0.9.0/)    | MIT License | Sebastián Ramírez                                                                                                                                                                                                                                             | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 881a55d1a7bdf577241f2c15df280188)-->
+<!--[[[end]]] (checksum: a57779d65cdc78d0cdfc7916cdf3270b)-->
 
 ### Indirect Dependencies
 
@@ -43,7 +43,7 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
-Markdown==3.4.4
+Markdown==3.5
 pandoc==2.3
 ├── plumbum [required: Any, installed: 1.8.2]
 └── ply [required: Any, installed: 3.11]
@@ -56,4 +56,4 @@ typer==0.9.0
 ├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
 └── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: 27ef106baf35acd8e04438f2c2c4237f)-->
+<!--[[[end]]] (checksum: ccfc9fe6bb22c2eaf2ab6816b4d589e5)-->

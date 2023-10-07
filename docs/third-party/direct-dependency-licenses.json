@@ -3,13 +3,13 @@
     "Author": "Manfred Stienstra, Yuri Takhteyev",
     "Description": "Python implementation of John Gruber's Markdown.",
     "License": "BSD License",
-    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.12/envs/gengive-3-10-12/lib/python3.10/site-packages/Markdown-3.4.4.dist-info/LICENSE.md",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.12/envs/gengive-3-10-12/lib/python3.10/site-packages/Markdown-3.5.dist-info/LICENSE.md",
     "LicenseText": "Copyright 2007, 2008 The Python Markdown Project (v. 1.7 and later)\nCopyright 2004, 2005, 2006 Yuri Takhteyev (v. 0.2-1.6b)\nCopyright 2004 Manfred Stienstra (the original version)\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright\n  notice, this list of conditions and the following disclaimer.\n* Redistributions in binary form must reproduce the above copyright\n  notice, this list of conditions and the following disclaimer in the\n  documentation and/or other materials provided with the distribution.\n* Neither the name of the Python Markdown Project nor the\n  names of its contributors may be used to endorse or promote products\n  derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE PYTHON MARKDOWN PROJECT ''AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL ANY CONTRIBUTORS TO THE PYTHON MARKDOWN PROJECT\nBE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\nCONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\nSUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\nINTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\nCONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\nARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\nPOSSIBILITY OF SUCH DAMAGE.\n",
     "Name": "Markdown",
     "NoticeFile": "UNKNOWN",
     "NoticeText": "UNKNOWN",
     "URL": "https://Python-Markdown.github.io/",
-    "Version": "3.4.4"
+    "Version": "3.5"
   },
   {
     "Author": "S\u00e9bastien Boisg\u00e9rault",
