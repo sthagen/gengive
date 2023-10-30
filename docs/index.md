@@ -8,9 +8,9 @@ Render text (Danish: gengive tekst).
 [![Configuration](badges/configuration-sbom.svg)](third-party/index.html)
 
 [![Version](https://img.shields.io/pypi/v/gengive.svg?style=flat)](https://pypi.python.org/pypi/gengive/)
-[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/gengive)
+[![Downloads](badges/downloads-per-month.svg)](https://pepy.tech/project/gengive)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/gengive.svg?style=flat)](https://pypi.python.org/pypi/gengive/)
-[![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/gengive/log)
+[![Maintenance Status](badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/gengive/log)
 
 ## Bug Tracker
 
