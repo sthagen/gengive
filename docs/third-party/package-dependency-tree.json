@@ -2,8 +2,8 @@
     {
         "key": "markdown",
         "package_name": "Markdown",
-        "installed_version": "3.5",
-        "required_version": "3.5",
+        "installed_version": "3.5.1",
+        "required_version": "3.5.1",
         "dependencies": []
     },
     {
