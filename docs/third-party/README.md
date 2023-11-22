@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([97ede455 ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:97ede4553bada0c399a47286ff1a827285393183a92dd0d43e485e73e9bccead")).
-<!--[[[end]]] (checksum: 1da3f48a86a74354b8ae4a527d438644)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([7e692909 ...](https://git.sr.ht/~sthagen/gengive/blob/default/etc/sbom/cdx.json.sha256 "sha256:7e6929093a21e6bca557fd0beb20601c455dfa5e4e34b8f69039cf09b28568ca")).
+<!--[[[end]]] (checksum: bd28c1af0442b3413c7f4c811209aeaf)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -14,9 +14,9 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 |:-------------------------------------------------------------------|:--------------------------------------------------|:------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
 | [Markdown](https://Python-Markdown.github.io/)                     | [3.5.1](https://pypi.org/project/Markdown/3.5.1/) | BSD License | Manfred Stienstra, Yuri Takhteyev                                                                                                                                                                                                                                                                                                                                                                                                | Python implementation of John Gruber's Markdown.                   |
 | [pandoc](https://github.com/boisgera/pandoc/blob/master/README.md) | [2.3](https://pypi.org/project/pandoc/2.3/)       | MIT License | Sébastien Boisgérault                                                                                                                                                                                                                                                                                                                                                                                                            | Pandoc Documents for Python                                        |
-| [pydantic](https://github.com/pydantic/pydantic)                   | [2.5.1](https://pypi.org/project/pydantic/2.5.1/) | MIT License | Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev>, Serge Matveenko <lig@countzero.co>, Marcelo Trylesinski <marcelotryle@gmail.com>, Sydney Runkle <sydneymarierunkle@gmail.com>, David Hewitt <mail@davidhewitt.io> | Data validation using Python type hints                            |
+| [pydantic](https://github.com/pydantic/pydantic)                   | [2.5.2](https://pypi.org/project/pydantic/2.5.2/) | MIT License | Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev>, Serge Matveenko <lig@countzero.co>, Marcelo Trylesinski <marcelotryle@gmail.com>, Sydney Runkle <sydneymarierunkle@gmail.com>, David Hewitt <mail@davidhewitt.io> | Data validation using Python type hints                            |
 | [typer](https://github.com/tiangolo/typer)                         | [0.9.0](https://pypi.org/project/typer/0.9.0/)    | MIT License | Sebastián Ramírez                                                                                                                                                                                                                                                                                                                                                                                                                | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 9eec3f516392e69714e6a63b9ef6ec9a)-->
+<!--[[[end]]] (checksum: fe3b19857fc8093b67b9a67eb32852f0)-->
 
 ### Indirect Dependencies
 
@@ -47,13 +47,13 @@ Markdown==3.5.1
 pandoc==2.3
 ├── plumbum [required: Any, installed: 1.8.2]
 └── ply [required: Any, installed: 3.11]
-pydantic==2.5.1
+pydantic==2.5.2
 ├── annotated-types [required: >=0.4.0, installed: 0.5.0]
-├── pydantic-core [required: ==2.14.3, installed: 2.14.3]
+├── pydantic-core [required: ==2.14.5, installed: 2.14.5]
 │   └── typing-extensions [required: >=4.6.0,!=4.7.0, installed: 4.7.1]
 └── typing-extensions [required: >=4.6.1, installed: 4.7.1]
 typer==0.9.0
 ├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
 └── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: 5a3625f05a0213f9024627951f5a9a0a)-->
+<!--[[[end]]] (checksum: e30b70fadc32f25afa08f84ee52b476c)-->
