@@ -1,0 +1,18 @@
+{
+  "gengive": {
+    "version": "7.3.2",
+    "timestamp": "2023-12-02T15:18:42.129656",
+    "branch_coverage": true,
+    "show_contexts": true,
+    "covered_lines": 296,
+    "num_statements": 346,
+    "percent_covered": 80.50682261208577,
+    "percent_covered_display": "80.51",
+    "missing_lines": 50,
+    "excluded_lines": 0,
+    "num_branches": 167,
+    "num_partial_branches": 30,
+    "covered_branches": 117,
+    "missing_branches": 50
+  }
+}
