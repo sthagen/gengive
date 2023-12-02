@@ -1,7 +1,7 @@
 {
   "gengive": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:18:42.129656",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 15:54:47 +00:00",
     "branch_coverage": true,
     "show_contexts": true,
     "covered_lines": 296,
@@ -13,6 +13,22 @@
     "num_branches": 167,
     "num_partial_branches": 30,
     "covered_branches": 117,
-    "missing_branches": 50
+    "missing_branches": 50,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 3,
+    "files": [
+      "gengive/__init__.py",
+      "gengive/cli.py",
+      "gengive/gengive.py"
+    ],
+    "blake3": "fc2ef38a93ed12d8e03e38a7279cd6100903116f11f6118a5e41c519e65e36fd",
+    "blake2": "db21a0944089681ff379df8f4e6dd9a9eb398a487b4c607e73be5a2d1306aa5ea6807075789d13c3b21e75e161469beabdac6b1a5b3a9311d9928085f84c390b",
+    "sha512": "7b31d53abc23c15818d09117c941a854c822b74b483d77c5ec5c315eeaa59e44e1b63950fa5e20ece7020806b4bf6459f2b5d6dd69d54c676177a07be1e3a8ae",
+    "sha384": "12fb15aa147002a004b206943244305732c8b67d8d98166a625ee45b3543741966494bdc7d84a994cd32396304f2adac",
+    "sha256": "591c380ace23362d3ab24b23fa6a32dee6c2425e9d4aeeba195217782f154b96",
+    "sha1": "73e3cb278237834cb31e40d592ad0afe8142852d",
+    "md5": "cc5222fef89b5c544fd856ec00c5a1d3",
+    "python_version": "3.10.12",
+    "entropy": 4.924922
   }
 }
