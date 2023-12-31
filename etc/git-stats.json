@@ -1,25 +1,55 @@
 {
   "total": {
-    "commits": 1433,
+    "commits": 1440,
     "first_committed_at": "2022-01-11T18:58:40+00:00",
-    "last_committed_at": "2023-12-29T20:25:48+00:00",
-    "month_span_day_count": 717,
-    "year_span": 1.9643835616438357,
-    "commits_per_year": 729,
-    "insertions_per_year": 12367.747559274756,
-    "deletions_per_year": 3641.854951185495,
-    "lines_per_year": 16009.60251046025,
-    "files_per_year": 1029.3305439330543,
-    "insertions_count": 24295,
-    "deletions_count": 7154,
-    "lines_count": 31449,
-    "files_count": 2022,
-    "insertions_avg": 16.95394277739009,
-    "deletions_avg": 4.992323796231682,
-    "lines_avg": 21.946266573621774,
-    "files_avg": 1.4110258199581298
+    "last_committed_at": "2023-12-31T12:31:48+00:00",
+    "month_span_day_count": 718,
+    "year_span": 1.9671232876712328,
+    "commits_per_year": 732,
+    "insertions_per_year": 12357.130919220057,
+    "deletions_per_year": 3643.391364902507,
+    "lines_per_year": 16000.522284122564,
+    "files_per_year": 1030.9470752089137,
+    "insertions_count": 24308,
+    "deletions_count": 7167,
+    "lines_count": 31475,
+    "files_count": 2028,
+    "insertions_avg": 16.880555555555556,
+    "deletions_avg": 4.977083333333334,
+    "lines_avg": 21.85763888888889,
+    "files_avg": 1.4083333333333334
   },
   "commit_stats": {
+    "2023-12-31T12:31:48+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2023-12-31T06:47:10+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2023-12-31T02:30:12+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2023-12-30T23:32:46+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2023-12-30T20:18:08+00:00": {
+      "insertions": 9,
+      "deletions": 9,
+      "lines": 18,
+      "files": 2
+    },
     "2023-12-29T20:25:48+00:00": {
       "insertions": 7,
       "deletions": 27,
@@ -13009,6 +13039,20 @@
       "deletions": 30,
       "lines": 40,
       "files": 5
+    },
+    "2023-12-30": {
+      "commits": 2,
+      "insertions": 10,
+      "deletions": 10,
+      "lines": 20,
+      "files": 3
+    },
+    "2023-12-31": {
+      "commits": 3,
+      "insertions": 3,
+      "deletions": 3,
+      "lines": 6,
+      "files": 3
     }
   }
 }
