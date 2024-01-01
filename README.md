@@ -26,9 +26,8 @@ The main source of `gengive` is on a mountain in central Switzerland.
 We use distributed version control (git).
 There is no central hub.
 Every clone can become a new source for the benefit of all.
-The preferred public clones of `gengive` are:
+The preferred public clone of `gengive` is:
 
-* [on codeberg](https://codeberg.org/sthagen/gengive) - a democratic community-driven, non-profit software development platform operated by Codeberg e.V.
 * [at sourcehut](https://git.sr.ht/~sthagen/gengive) - a collection of tools useful for software development.
 
 ## Contributions
