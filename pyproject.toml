@@ -7,6 +7,7 @@ name = "gengive"
 version = "2023.6.19"
 description = "Render text (Danish: gengive tekst)."
 readme = "README.md"
+license = {file = "LICENSE"}
 authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 maintainers = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
 classifiers = [
