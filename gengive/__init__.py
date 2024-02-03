@@ -1,4 +1,5 @@
 """Render text (Danish: gengive tekst)."""
+
 import os
 import pathlib
 from typing import List
