@@ -56,7 +56,7 @@ def describe_file(file_path: PathType) -> Tuple[str, Union[dti.datetime, None], 
         return 'cafebabe' * 8, None, 0
     file_stats = file_path.stat()
     file_size_bytes = file_stats.st_size
-    file_timestamp = dti.datetime.utcfromtimestamp(file_stats.st_mtime)
+    file_timestamp = dti.datetime.fromtimestamp(file_stats.st_mtime, dti.UTC)
     with open(file_path, 'rb') as handle:
         sha256_hash = hashlib.sha256()  # noqa
         for byte_block in iter(lambda in_f=handle: in_f.read(BUFFER_BYTES), b''):  # type: ignore
@@ -372,7 +372,7 @@ def main(argv: Union[List[str], None] = None) -> int:
         print('For usage info: render --help')
         return 2
 
-    processing_start = dti.datetime.utcnow()
+    processing_start = dti.datetime.now(dti.UTC)
     root_path = workspace_path()
     error_code, message, root_path, command, manuscript, variant, render_path = parse_request(root_path, argv)
     if error_code:
@@ -491,7 +491,7 @@ def main(argv: Union[List[str], None] = None) -> int:
     model['asset_descriptions'] = collect_asset_descriptions(media_selection, manuscript_path)
 
     print(f'Done. Entrypoint is {html_path}')
-    processing_stop = dti.datetime.utcnow()
+    processing_stop = dti.datetime.now(dti.UTC)
     model = {
         **model,
         'processing_stop': processing_stop.strftime(REPORT_TIMESTAMP_FORMAT),
