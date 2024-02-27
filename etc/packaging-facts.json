@@ -21,6 +21,7 @@
       "last_month": -1,
       "last_week": -1
     },
+    "dynamic": null,
     "home_page": "",
     "keywords": "developer-tools,markdown,verification",
     "license": "",
@@ -37,6 +38,7 @@
       "Source-Code": "https://git.sr.ht/~sthagen/gengive",
       "Test-Coverage": "https://codes.dilettant.life/coverage/gengive"
     },
+    "provides_extra": null,
     "release_url": "https://pypi.org/project/gengive/2023.6.19/",
     "requires_dist": [
       "markdown (>=3.3.7)",
